@@ -1,0 +1,29 @@
+Setting up a MSI laptop with GPU (gtx1060)
+Installing Ubuntu 18.04, CUDA, CDNN, Pytorch and TensorFlow
+Installing Ubuntu 18.04
+Get Image
+
+https://tutorials.ubuntu.com/tutorial/tutorial-create-a-usb-stick-on-ubuntu#0
+Install (solving issues)
+
+    Security boot disable (change this in BIOS, for MSI computers reboot system and press delete a couple of times before the OS is loaded)
+    Possible problem: Screen freezing while installing
+        Reboot system
+        Go to the Install Ubuntu option (BUT DONT PRESS ENTER)
+        Press e
+        Find the line that starts with linux then add modprobe.blacklist=nouveau after quiet splash.
+    Choose a Wifi Network and install third party software and updates
+    Once the installation is done, remove the pendrive and reboot system
+
+Installing Nvidia Drivers
+
+    Select Ubuntu at GRUB (you may need to repeat the modprobe.blacklist=nouveau step if the screen freezes again).
+    Make sure security boot is disable
+    Access command line (ctrl+alt+ F1,F2,F3...F??)
+
+    sudo add-apt-repository ppa:graphics-drivers/ppa
+    sudo apt update
+    # You can change this driver to whatever version suits you best :)
+    sudo apt install nvidia-driver-396
+    sudo reboot
+
