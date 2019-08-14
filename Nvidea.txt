@@ -1,3 +1,4 @@
+HOW TO INSTALL UBUNTU ON MSI
 Setting up a MSI laptop with GPU (gtx1060)
 Installing Ubuntu 18.04, CUDA, CDNN, Pytorch and TensorFlow
 Installing Ubuntu 18.04
